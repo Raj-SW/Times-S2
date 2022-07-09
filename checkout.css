@@ -1,0 +1,120 @@
+.checkoutContainer {
+  text-align: center;
+}
+.checkoutContainer form {
+  align-items: center;
+}
+.checkOutFiller {
+  width: 100%;
+  display: block;
+  margin-top: 123px;
+}
+.checkOutFiller p {
+  line-height: 40px;
+}
+.checkoutHeader {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+}
+.checkoutHeader h2 {
+  font-size: 24px;
+  padding: 12px;
+  text-align: center;
+}
+.formWrapper {
+  width: 100%;
+  padding: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.keepMeUpdated {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.shippingAddress {
+  grid-row-start: 2;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.nameSurname {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.moreInput {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.countryInput {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.lastButtons {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.formWrapper input {
+  width: 400px;
+  padding: 15px;
+  font-size: 26;
+  margin: 5px;
+}
+.formWrapper ::placeholder {
+  font-size: 18pxs;
+}
+.formWrapper select {
+  vertical-align: middle;
+  height: 45px;
+  width: 400px;
+}
+.keepMeUpdated {
+  display: block;
+}
+.keepMeUpdated #cntn {
+  float: left;
+  font-size: 10px;
+}
+label {
+  font-size: 26px;
+}
+.formWrapper input {
+  font-size: 24px;
+}
+.formWrapper ::placeholder {
+  font-size: 24px;
+}
+.formWrapper select {
+  font-size: 24px;
+}
+#abcdefg {
+  width: 810px;
+}
+#cntc {
+  width: 660px;
+}
+.shippingdiv input {
+  width: 813px;
+}
+.lastButtons button {
+  width: 20%;
+  height: 50px;
+  font-size: 24px;
+}
+.lastButtons {
+  font-size: 24px;
+}

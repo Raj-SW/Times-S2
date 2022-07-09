@@ -1,0 +1,149 @@
+.item-results-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 80px;
+  padding-left: 50px;
+  row-gap: 15px;
+}
+.divFiller {
+  margin-top: 75px;
+}
+.item-results-display {
+  text-align: center;
+}
+.product {
+  background-color: #f1f1f100;
+  width: 75%;
+  height: 75%;
+  grid-auto-rows: max-content;
+}
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.product p {
+  text-align: left;
+  font-size: 12px;
+}
+.view-item {
+  text-align: center;
+  display: block;
+  margin: 8px 30px;
+}
+.view-item input {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  border-left: 1px solid black;
+}
+.filter-criteria {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 50px;
+}
+.filter-criteria select {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  max-width: 200px;
+  border-bottom: 2px solid black;
+  margin-bottom: 2px;
+}
+.product:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.2s ease;
+}
+
+.heading {
+  width: 100%;
+  height: 10px;
+  margin: 5px;
+}
+
+.heading h2 {
+  text-align: center;
+}
+.btn {
+  display: inline-block;
+  background-color: #111;
+  color: white;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+}
+@media screen and (min-width: 768px) {
+  .item-results-container {
+    grid-template-columns: 30% 30% 30%;
+  }
+  .divFiller {
+    margin-top: 120px;
+  }
+  .sidebar {
+    float: left;
+  }
+  .heading {
+    height: 50px;
+    margin-top: 50px;
+  }
+  .product p {
+    font-size: 14px;
+  }
+  .search-page-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .item-results-display {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .sidebar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .filter-criteria {
+    display: block;
+    padding: 15px;
+    width: 100%;
+    margin-left: 10px;
+  }
+  .filter-criteria select {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .heading h2 {
+    font-size: 24px;
+  }
+  .heading {
+    height: 11px;
+    margin-top: 34px;
+  }
+
+  .footer-container {
+    border-top: 1px solid black;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .item-results-container {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+}

@@ -1,0 +1,148 @@
+.addToCartContainerAll {
+  display: grid;
+  grid-template-columns: 1fr 70% 1fr;
+  padding: 50px;
+}
+.headerWrapperUp {
+  height: 50px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: #000000;
+  color: white;
+  display: grid;
+  grid-template-columns: 70% 10% 20%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.cartItemsContainer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  min-height: 100px;
+}
+
+.itemCardCartContainer {
+  display: grid;
+  grid-template-columns: 20% 50% 10% 10% 10%;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.imageCardContainer {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 15px 0;
+  display: flex;
+}
+.productCartDetails {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  text-align: left;
+  padding: 10px 20px;
+  line-height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.abc {
+  margin-top: 120px;
+  height: 50px;
+  padding: 15px;
+}
+#nic {
+  font-size: 24px;
+  color: white;
+}
+
+.itemCardCartContainer:nth-child(even) {
+  background-color: #ececec;
+}
+.imageCartContainer img {
+  object-fit: contain;
+  object-position: center;
+  max-height: 100;
+  max-width: 100%;
+}
+
+.productCartDetails p {
+  padding: 11px;
+  line-height: 21px;
+}
+.quantity {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  text-align: center;
+}
+.subTotal {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  text-align: center;
+}
+.icon {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  text-align: center;
+}
+.icon button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.icon button i {
+  font-size: 16px;
+  color: black;
+  background-color: none;
+}
+.headerWrapperDown {
+  height: 50px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 15px;
+  color: white;
+}
+.headerWrapperDown .wrapInside {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  display: flex;
+  justify-content: space-around;
+}
+.headerWrapperDown p {
+  display: inline-block;
+}
+.buttonContainer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 100%;
+  float: right;
+  text-align: right;
+  padding: 20px;
+  margin: 10px;
+}
+.buttonContainer button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 0;
+  width: 175px;
+  height: 50px;
+}
+@media screen and (max-width: 400px) {
+  .itemCardCartContainer {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    font-size: 11px;
+  }
+  .addToCartContainerAll {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 5% 90% 5%;
+  }
+}
