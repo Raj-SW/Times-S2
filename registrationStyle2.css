@@ -13,10 +13,10 @@
 .form-box{
     border:transparent;
     border-radius: 5px;
-    height: 700px;
+    height: 600px;
     width: 400px;
     background: #fff;
-    margin: 0 auto;
+    margin: 10 auto;
     position: relative;
     padding-top: 10px;
     overflow: hidden;
@@ -92,6 +92,7 @@
     height: 45px;
     width: 100%;
     border-radius: 5px;
+    border-style: none;
     border: 3px solid black;
    
 }
@@ -133,8 +134,8 @@
 }
 
 .input-group .button{
-    height: 35px;
-    margin:5px 45px;
+    height: 45px;
+    margin:15px 45px;
     width: 300px;
     
 }

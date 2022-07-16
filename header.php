@@ -50,7 +50,9 @@ $resultBannerApparel=mysqli_query($conn,$sqlBannerApparel);
 
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
+  <script type="text/javascript" src="ajaxFunctions/ajax_functions.js"></script>
+
+  <script
       src="https://kit.fontawesome.com/0471017f2a.js"
       crossorigin="anonymous"
     ></script>

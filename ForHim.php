@@ -2,6 +2,7 @@
   include 'includes/dbh.inc.php';
   include 'header.php';
 
+
   $shirtSql = "SELECT * FROM items WHERE itemCategory='shirt' AND itemGender ='male' LIMIT 4 ";
   $trouserSql = "SELECT * FROM items WHERE itemCategory='trouser' AND itemGender ='male'LIMIT 4 ";
   $jacketSql = "SELECT * FROM items WHERE itemCategory='jacket' AND itemGender ='male' LIMIT 4";
@@ -16,7 +17,7 @@
  
 ?>
 
-  </header>
+  </header>S
   <div class="filler"></div>
  
 <div class="forhimherBody">
@@ -35,8 +36,57 @@
               <div class="innerCategoryWrapper">
 
   <?php
+
+
     while($row = mysqli_fetch_assoc($shirtSqlResult)){
-    $path=$row['itemPath'];
+      //create a new xml documement
+  $xmlDoc = new DOMDocument();
+  $xmlDoc->formatOutput=true;
+
+  //create variable items to hold the xml tags and set products as the root tag
+    $itemCard = "";
+    $itemCard = $xmlDoc->createElement("itemCard");
+    $xmlDoc->appendChild($itemCard);
+      $item = $xmlDoc->createElement("item");
+      $xmlDoc->appendChild($item);
+
+      //fetch the values of the item in form of sub tags
+
+      $itemPath = $xmlDoc->createElement("productPath", $row['itemPath']);
+      $itemName= $xmlDoc->createElement("itemName", $row['itemName']);
+      $itemPrice= $xmlDoc->createElement("itemPrice", $row['itemPrice']);
+      $itemId= $xmlDoc->createElement("itemId", $row['itemId']);
+
+      //add the subtags to the item tag
+
+      $item->appendChild($itemPath);
+      $item->appendChild($itemName);
+      $item->appendChild($itemPrice);
+      $item->appendChild($itemId);
+
+      //validate xml and load xslt
+     
+     //if(!$xmlDoc->schemaValidate('xsdDocuments/itemCard.xsd')){
+    //  echo'Error validating item card';
+    // }
+        
+
+      
+    //else{
+
+      $xslHisShirts = new DOMDocument();
+      $xslHisShirts->load('xslDocuments/hisShirts.xsl');
+      $xsltProcessor = new XSLTProcessor;
+      $xsltProcessor->importStylesheet($xslHisShirts);
+      echo $xsltProcessor->transformToXml($xmlDoc);
+      
+    // }
+
+  } 
+
+
+
+    /*$path=$row['itemPath'];
     $name=$row['itemName'];
     $price=$row['itemPrice'];
       echo "<div class='product'>
@@ -51,8 +101,8 @@
         </div>
 
         </form>
-    </div>";
-      }
+    </div>";*/
+     
     
   ?>
               </div>

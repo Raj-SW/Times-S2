@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="itemCard">
+    <xs:complexType>
+        
+      <xs:sequence>
+        <xs:element name="item" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="itemPath"/>
+              <xs:element type="xs:string" name="itemName"/>
+              <xs:element type="xs:double" name="itemPrice"/>
+              <xs:element type="xs:integer" name="itemId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

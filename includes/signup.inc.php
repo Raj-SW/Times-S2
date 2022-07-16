@@ -3,8 +3,8 @@
 if(isset($_POST["register"])){
 
     $full_name = $_POST["full_name"];
-    $username = $_POST["username"];
-    $email = $_POST["email"];
+    $username = $_POST["user_name"];
+    $email = $_POST["user_mail"];
     $phone_number = $_POST["phone_number"];
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];

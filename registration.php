@@ -15,35 +15,44 @@
 <div class="user-details">
     <div class="input-field">
         <span class="description">Name</span>
-        <input type="text" name="full_name" placeholder=" Enter your name">
+        <input type="text" name="full_name" id="full_name" placeholder=" Enter your name" onblur="check_name(this)">
+        <div><p id="name-form-message"></p></div>
     </div>
     <div class="input-field">
-        <span class="description">Username</span>
-        <input type="text" name="username" placeholder=" Enter your username">
+        <span class="description">Username </span>
+        <input type="text" name="user_name" id="user_name" placeholder=" Enter your username" onblur="check_username(this)">
+        
+        <div><p id="username-form-message"></p></div>
     </div>
     <div class="input-field">
         <span class="description">Email</span>
-        <input type="text" name="email"placeholder=" Enter your email">
+        <input type="text" name="user_mail" id="user_mail" placeholder=" Enter your email" onblur="check_mail(this)" >
+        <div><p id="email-form-message"></p></div>
     </div>
     <div class="input-field">
         <span class="description">Phone Number</span>
-        <input type="text" name="phone_number" placeholder=" Enter your phone number">
+        <input type="text" name="phone_number" id="phone_number" placeholder=" Enter your phone number" onblur="check_phone(this)">
+        <div><p id="phone-form-message"></p></div>
     </div>
     <div class="input-field">
         <span class="description">Password</span>
-        <input type="password" name="password" placeholder=" Enter your password">
+        <input type="password" name="password" id="password" placeholder=" Enter your password" onblur="check_password(this)">
+        <div><p id="password-form-message"></p></div>
     </div>
     <div class="input-field">
         <span class="description">Confirm Password</span>
-        <input type="password" name="confirm_password" placeholder=" Confirm your password">
+        <input type="password" name="confirm_password" id="confirm_password" placeholder=" Confirm your password" onblur="check_confirm_password(this)">
+        <div><p id="confirm-form-message"></p></div>
     </div>
     <div class="input-field">
         <span class="description">Zip code</span>
-        <input type="text" name="zipcode" placeholder=" Enter your Zip code">
+        <input type="text" name="zipcode" id="zipcode" placeholder=" Enter your Zip code" onblur="check_zipcode(this)">
+        <div><p id="zip-form-message"></p></div>
     </div>
     <div class="input-field">
         <span class="description">Address</span>
-        <input type="text" name="address" placeholder=" Enter your Address">
+        <input type="text" name="address" id="address" placeholder=" Enter your Address" onblur="check_address(this)">
+        <div><p id="address-form-message"></p></div>
     </div>
 </div>
 <div class="gender-details">
@@ -73,6 +82,14 @@
 </div>
 
 </form>
+<!--On blur function-->
+
+<script>
+function blurFunction() {
+  var x = document.getElementById("user_name");
+  x.value = x.value.toUpperCase();
+}
+</script>
 
 <?php
 if(isset($_GET["error"])){
@@ -103,7 +120,8 @@ else if($_GET["error"]== "none"){
 <div class="user-details">
 <div class="input-field">
 <span class="description">Username</span>
-    <input type="text" name="username" placeholder=" Enter your username or email">
+    <input type="text" name="username" placeholder=" Enter your username or email" class="valid">
+    
     </div>
    
     <div class="input-field">
