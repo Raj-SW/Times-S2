@@ -52,7 +52,7 @@
 
       //fetch the values of the item in form of sub tags
 
-      $itemPath = $xmlDoc->createElement("productPath", $row['itemPath']);
+      $itemPath = $xmlDoc->createElement("itemPath", $row['itemPath']);
       $itemName= $xmlDoc->createElement("itemName", $row['itemName']);
       $itemPrice= $xmlDoc->createElement("itemPrice", $row['itemPrice']);
       $itemId= $xmlDoc->createElement("itemId", $row['itemId']);
@@ -66,13 +66,11 @@
 
       //validate xml and load xslt
      
-     //if(!$xmlDoc->schemaValidate('xsdDocuments/itemCard.xsd')){
-    //  echo'Error validating item card';
-    // }
-        
+   //  if(!$xmlDoc->schemaValidate('xsdDocuments/itemCard.xsd'))
+      //  echo'Error validating item card';
 
       
-    //else{
+   // else{
 
       $xslHisShirts = new DOMDocument();
       $xslHisShirts->load('xslDocuments/hisShirts.xsl');
@@ -82,7 +80,7 @@
       
     // }
 
-  } 
+      
 
 
 
@@ -102,7 +100,7 @@
 
         </form>
     </div>";*/
-     
+      }
     
   ?>
               </div>
